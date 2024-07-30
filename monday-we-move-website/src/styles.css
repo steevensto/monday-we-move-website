@@ -1,0 +1,319 @@
+/* Carousel styling */
+.slick-prev, .slick-next {
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+.slick-prev {
+  left: 10px;
+  color: white; /* Ensure the arrow is visible */
+}
+
+.slick-next {
+  right: 10px;
+  color: white; /* Ensure the arrow is visible */
+}
+
+.slick-prev:before, .slick-next:before {
+  content: '';
+}
+
+.slider-custom .slick-list {
+  overflow: visible;
+}
+
+.slider-custom .slick-slide {
+  display: flex !important; /* Override Slick's default display */
+  flex-direction: row !important; /* Ensure row layout on all screen sizes */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0; /* Light grey background for the carousel */
+  padding: 20px; /* Add padding to separate content from edges */
+  border-radius: 10px; /* Rounded corners for a polished look */
+  margin: 10px; /* Add margin to separate slides */
+}
+
+.slider-custom .slick-slide > div {
+  width: 100%; /* Ensure the div inside slick-slide takes full width */
+}
+
+.slider-custom .text-content {
+  width: 50%; /* Ensure text takes up half the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* Take the full height of the slide */
+  padding: 20px;
+  background-color: white; /* White background for the text content */
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.slider-custom img {
+  width: 50%; /* Ensure image takes up half the width */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; /* Ensure image covers area without distortion */
+}
+
+.text-large {
+  font-size: 24px; /* Larger font size for text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slider-custom .slick-slide {
+    flex-direction: column !important;
+  }
+
+  .slider-custom .text-content,
+  .slider-custom img {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Additional styles to ensure proper layout */
+.slider-custom {
+  overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto !important;
+}
+
+/* Ensure the content inside each slide is properly aligned */
+.slider-custom .slick-slide > div > div {
+  display: flex !important;
+  flex-direction: row !important;
+  height: 100%;
+}
+
+/* General styling */
+.relative {
+  position: relative;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-gray-700 {
+  color: #4a4a4a;
+}
+
+.text-primary {
+  color: #000000; /* Primary color for text is black */
+}
+
+.bg-primary {
+  background-color: #000000; /* Primary background color is black */
+}
+
+.bg-secondary {
+  background-color: #f8bbd0; /* Secondary background color */
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover\\:shadow-xl:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.transition-shadow {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Section styling */
+.space-y-20 > * + * {
+  margin-top: 20px;
+}
+
+.bg-e91e63 {
+  background-color: #e91e63; /* Background color for the "Start Moving" button */
+}
+
+@media (min-width: 768px) {
+  .md\\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .md\\:w-1\\/2 {
+  width: 50%;
+}
+}
+
+.slider-custom img[src='/generated_schedule.png'],
+.slider-custom img[src='/upcoming_workout.png'] {
+  max-width: 80%; /* Limit the width to 80% of the container */
+  max-height: 400px; /* Set a maximum height */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the container */
+}
+
+/* Custom styles for the squares and plus sign */
+.square {
+  aspect-ratio: 1;
+  width: 350px; /* Adjust the width as needed */
+  height: 350px; /* Adjust the height as needed */
+}
+
+.plus-sign {
+  font-size: 3rem; /* Larger font size for better visibility */
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.slide-title {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.slide-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.slide-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.slide-content {
+  flex: 1;
+  padding: 20px;
+}
